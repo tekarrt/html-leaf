@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Prosto+One&display=swap");
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "libs";
+@import "global";
+
+.header {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+        align-items: center;
+    }
+    &__list {
+        //font-family: Prosto One;
+    }
+    &__btn-section{
+        display: flex;
+    }
+    &__list-item {
+        &:not(:last-child) {
+            margin-right: 100px;
+        }
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: #312f30;
+    }
+    &__btn-basket {
+        background: #312f30;
+        cursor: pointer;
+        border: 0;
+        img {
+            padding: 15px 10px;
+            transition: all 0.5s;
+        }
+        &:hover {
+            img {
+                transform: rotate(360deg);
+            }
+        }
+    }
+    &__btn-burger{
+        display: none;
+        background: #312f30;
+        cursor: pointer;
+        border: 0;
+        margin-right: 10px;
+        img {
+            padding: 18px 10px;
+            transition: all 0.5s;
+        }
+        &:hover {
+            img {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+.main__menu {
+    background: #f0f4fb;
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+}
+
+.slider {
+    background: #f0f4fb;
+    height: 600px;
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    &__slide {
+        width: 0;
+        transition: 0.5s;
+        transform: translateX(-1200px);
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        &:nth-child(2){
+            img:nth-child(2){
+                display: none;
+            }
+        }
+    }
+}
+
+.order {
+    background: #f0f4fb;
+    &__wrapper {
+        padding: 50px 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    &__price {
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+        padding: 17px 25px;
+        background: #ffffff;
+    }
+    &__btn {
+        transition: .3s;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 0.04em;
+        color: #ffffff;
+        border: 0;
+        background: #312f30;
+        padding: 17px 51px;
+        cursor: pointer;
+        &:hover {
+            color: #dad9ff;
+            background: #121212;
+        }
+    }
+}
+
+.active {
+    width: 53%;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translateX(0);
+}
+
+.social-list {
+    display: flex;
+    a {
+        img {
+            width: 62%;
+            transition: 0.5s;
+        }
+        &:not(:last-child) {
+            margin-right: 19px;
+        }
+        &:hover {
+            img {
+                transform: rotate(360deg);
+            }
+        }
+        display: flex;
+        width: 34px;
+        height: 34px;
+        background-color: #000000;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.button-slider {
+    transition: 0.3s;
+    border: 0;
+    border: 1px solid #312f30;
+    cursor: pointer;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    &:nth-child(2) {
+        margin-left: 10px;
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+    &-block {
+        display: flex;
+    }
+    &:hover {
+        background: #312f30;
+        path {
+            stroke: #ffffff;
+        }
+    }
+}
+
+.night-photo__btn {
+    margin-right: 90px;
+    display: flex;
+    align-items: center;
+    border: 0;
+    cursor: pointer;
+    background: #000000;
+    border-radius: 4px;
+    padding: 5px 13px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #ffffff;
+    img {
+        margin-right: 7px;
+        transition: 0.5s;
+    }
+    &:hover {
+        img {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+.logo {
+    &__svg {
+        transition: 0.5s;
+    }
+    &:hover {
+        .logo__svg {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+@import "media";
